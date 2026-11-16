@@ -49,7 +49,11 @@ Relatório Parte 2
  A versão com semáforo impede isso usando exclusão mútua, fazendo com que o thread necessite de autorização do semáforo para acessar o contador (semaforo.acquire()), se um thread tenta acessar o contador enquanto outra thread possui a permissão a thread é bloqueada e entra em uma fila até o contador estiver disponivel, sendo necessário que a thread devolva a autorização para o semáforo (semaforo.release()). Estes comandos protegem o acesso, agindo como uma barreira implícita de memória, tornando o contador visível imediamente para a proxima thread que consegue autorização. Devido a essa fila, o throughput é sacrificado, aumentando significativamente o tempo de execução, porém mantém integridade absoluta dos dados com 0 perdas.
 
  Logs Parte 2
+
+
  Sem semaforo:
+ 
+ 
  Esperado:  1600000  Obtido:  200140 Perdidos:  1399860 Tempo:  3.581686496734619
 
 
@@ -59,6 +63,8 @@ Relatório Parte 2
  Esperado:  1600000  Obtido:  200320 Perdidos:  1399680 Tempo:  3.7311270236968994
 
  Com semaforo: 
+ 
+ 
  Esperado:  1600000  Obtido:  1600000 Perdidos:  0 Tempo:  18.084654808044434
 
 
@@ -88,6 +94,8 @@ Para rodar sem o deadlock:
  Para corrigir usamos a hierarquia de recursos, fazendo todas as threads pegarem sempre o LOCK_A antes do LOCK_B. Assim, se a T1 pega o LOCK_A primeiro, a T2 fica esperando o LOCK_A sem segurar nenhum lock, a T1 termina e libera os dois, e só depois a T2 executa. A condição de Coffman que foi quebrada é a espera circular, já que com a ordem fixa não dá mais pra formar um ciclo de espera.
 
  Logs Parte 3
+ 
+ 
  Com deadlock:
 
 
