@@ -1,6 +1,6 @@
 # tdeProgramacaoConcorrente
 
-Link do video no YouTube: 
+Link do video no YouTube: https://www.youtube.com/watch?v=4HiIAR7BqXQ
 
 Nome do Grupo: TDE2 20
 
