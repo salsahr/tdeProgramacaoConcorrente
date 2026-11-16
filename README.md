@@ -28,3 +28,6 @@ Para eles conseguirem comer a condição é que eles peguem tanto o garfo posici
 ao mesmo tempo por exemplo, o garfo da esquerda, não irá sobrar nenhum garfo na direita de ninguém, logo ninguém consegue comer e todos ficam esperando. A condição de Coffman que será negada na nossa solução proposta 
 é a de condição de espera circular.
 
+Fluxograma está dentro da pasta parte1-filosofos
+
+
